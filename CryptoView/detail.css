@@ -23,6 +23,13 @@
     text-align: justify;
 }
 
-mt_1_25{
+.mt_1_25{
     margin-top: 1.25rem;
+}
+
+.historical{
+    position: relative;
+    height: 15rem;
+    width:50vw;
+    margin: auto;
 }
