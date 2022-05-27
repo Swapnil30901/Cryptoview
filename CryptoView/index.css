@@ -42,7 +42,7 @@ nav{
     justify-content: flex-start; 
     position: relative;
     animation-name: smooth_scroll;
-    animation-duration: 20s; 
+    animation-duration: 25s; 
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
