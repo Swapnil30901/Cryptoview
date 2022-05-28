@@ -17,9 +17,9 @@ function showPrice(data) {
     const inr_price = document.getElementById('inr_price');
     const usd_price = document.getElementById('usd_price');
     const eur_price = document.getElementById('eur_price');
-    inr_price.innerText = data.bitcoin.inr;
-    usd_price.innerText = data.bitcoin.usd;
-    eur_price.innerText = data.bitcoin.eur;
+    inr_price.innerText = data[coin_id].inr;
+    usd_price.innerText = data[coin_id].usd;
+    eur_price.innerText = data[coin_id].eur;
 
 }
 function showHistory(data) {
@@ -27,10 +27,14 @@ function showHistory(data) {
     showGraph(data);
 }
 
+var url      = new URL(window.location.href); 
+var params   = new URLSearchParams(url.search);
+let coin_id  = params.get("coin");
 
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false").then(convertToJson).then(showInfo);
-fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd%2Ceur").then(convertToJson).then(showPrice);
-fetch("https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=inr&days=14&interval=daily").then(convertToJson).then(showHistory);
+
+fetch(`https://api.coingecko.com/api/v3/coins/${coin_id}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`).then(convertToJson).then(showInfo);
+fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin_id}&vs_currencies=inr%2Cusd%2Ceur`).then(convertToJson).then(showPrice);
+fetch(`https://api.coingecko.com/api/v3/coins/${coin_id}/market_chart?vs_currency=inr&days=14&interval=daily`).then(convertToJson).then(showHistory);
 
 function convertUnixToReadable(timestamp){ 
     const date = new Date(timestamp);

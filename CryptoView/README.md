@@ -15,3 +15,19 @@ Detail Screen
 
 Chart Library -> https://www.chartjs.org/docs/latest/
 Chart Library CDN-> https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js
+
+
+-> for images free websites
+
+->https://undraw.co/
+->https://pixabay.com/
+->https://picsum.photos/
+->https://unsplash.com/
+->https://www.pexels.com/
+->https://icons8.com/illustrations/style--business-3d
+->https://www.flaticon.com/
+->https://www.iconfinder.com/
+->https://www.iconarchive.com/
+->https://www.humaaans.com/
+->
+
