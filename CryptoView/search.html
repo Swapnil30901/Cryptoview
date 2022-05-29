@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search | CryptoView</title>
+    <script src="https://kit.fontawesome.com/24f58cf994.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./search.css"/>
 </head>
 <body>
-    <nav>
-        <h1>Search screen</h1>
+    <nav class="flex_container">
+        <div class="flex_container">
+            <img src="./crypto.png" alt="logo" class="logo">
+            <h1>CryptoView</h1>
+        </div>
     </nav>
-
     <section>
         <form action="">
             <input type="text" placeholder="Search...." name="q" id="search_field"/>
@@ -23,15 +26,26 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Logo</th>
-                    <th>Name</th>
-                    <th>Link(More info)</th>
+                    <th class="table_field">ID</th>
+                    <th class="table_field">Logo</th>
+                    <th class="table_field">Name</th>
+                    <th class="table_field">Link(More info)</th>
                 </tr>
             </thead>
             <tbody id="search_result"></tbody>
         </table>
     </section>
+
+    <footer>
+        <i class="fa-brands fa-facebook-f"></i>
+        &emsp;
+        <i class="fa-brands fa-instagram"></i>
+        &emsp;
+        <i class="fa-brands fa-twitter"></i>
+        &emsp;
+        <i class="fa-brands fa-linkedin"></i>
+        <h3>Copyright &copy; Swapnil &amp; team</h3>            
+    </footer>
     <script src="./search.js"></script>
 </body>
 </html>
